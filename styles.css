@@ -1,0 +1,351 @@
+*{
+    box-sizing:border-box
+}
+
+html {
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+/* HEADER  */
+header {
+    /* max-height: 20%;*/
+    position: fixed;
+    border-bottom: 1px solid red; 
+    z-index: 5;              
+   /*  height: 6rem;  */              
+ }
+
+ header, footer {
+     width: 100%;  
+     background-color: black;
+     color: white;
+ }
+
+ footer {
+    padding: 1rem;
+    text-align:center;
+ }
+
+
+header .content {
+    display: flex;    
+ /*   justify-content: flex-end;  */
+    align-items:center;
+  
+}
+
+
+header .logo-icon {
+  flex-shrink: 1;
+  flex: 1; 
+  color: white;
+  /* justify-self:center;*/
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem 0;
+  padding-left: 1rem;
+
+  font-family: 'Libre Bodoni', serif;
+ /* font-family: 'Rubik Distressed', cursive;  */
+}
+
+
+header .desktop ul {
+    display: flex;
+}
+
+header nav li {
+    padding:  0 1rem;
+    list-style-type: none;
+   
+}
+
+nav li a {
+    color: white;
+    vertical-align:middle;
+    font-size: 1rem;
+    line-height: 1.4; 
+    
+} 
+
+.button {
+  border-radius: 4px;
+  background-color: blue;
+  padding:0.5rem;
+  color:white;
+}
+
+header .mobile {
+    display: none;
+}
+
+header .desktop  {
+    display:block;    
+}
+
+header .desktop ul {
+  display: flex;
+  
+}
+
+/*
+header nav li {
+   padding: 2rem;
+} 
+*/
+
+@media only screen and (max-width: 760px) {
+    header .desktop {
+        display: none;
+    } 
+
+    header .mobile  {
+        display:block;
+        width: 100%;
+        background-color: white;
+    }
+
+    header .mobile ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header .mobile .button {
+        background-color: white;
+        color: black;
+        line-height: 1.4;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid black;
+        font-weight: bold;
+    }
+}
+
+
+
+/* BANNER  */
+
+#banner {
+    border-top: 1px solid red;
+}
+
+
+#banner img{
+    margin-top: 3.5rem;   
+    max-width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+} 
+
+#banner div.videowrapper iframe {
+    margin-top: 4.5rem;
+}
+
+/* NOTE: Typical Video Wrapper is RATIO 16:9. By the way, which is also the size of you average TV screen. */
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;/* By setting the "Padding to %", we add a height to the videowrapper which scale according to hts own width. By setting the padding to 56.25%, we then have a 16:9 scaling which is the size of the video.  */
+    padding-top: 25px;
+    height: 0px;
+}
+
+.videowrapper iframe {
+    position: absolute;  /* "Position: absolute" would not have worked if we had not included "position: relative" in the .videowrapper container abovel  */
+    left:0px;
+    top:0px;
+    right: 0px;
+    bottom:0px;
+    height: 92%;
+    width: 100%;
+}
+
+
+/*  ------------------------------------------------------------------------------------------------------  */
+
+/*     MAIN SECTION  */
+
+.intro {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    padding: 0 2rem;
+    font-size: 3rem;
+}
+
+.intro p {
+    font-size: 1.5rem;
+}
+   
+
+
+/* IMAGE CONTAINER   */
+
+.image-holder {          
+    display: flex; 
+    justify-content: space-around;
+}
+
+.image-item { 
+    width: 30rem;
+    height: 25rem;
+    margin: 15px;
+ }
+ 
+
+.image-item img {       BORDER: 2PX SOLID GREEN;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+     border-radius: 25px;
+}
+
+#club-building {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+#club-building img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+div.section {
+    margin-bottom: 4rem;
+}
+
+div.section h2, p {
+    margin-left: 2rem;
+}
+
+.main-section blockquote {
+    font-size: 2rem;
+    color: red;
+    font-style: italic;
+    
+}
+
+blockquote span {
+    margin-left: 6rem;
+    font-size: 1.75rem;
+    color: black;
+    
+}
+
+.main-section span {
+  color: black;
+  text-align: left;
+}
+
+
+#club-building h2 {
+    margin-left: 1rem;
+}
+
+
+#join-us {                                               
+    margin-top: 4.5rem;
+}
+
+
+
+div.section {
+    position: relative;
+}
+
+#come-have-fun {   
+    top: -70px;
+    
+}
+
+
+/* The below 2 BLOCKS SELECTORS - SOLVE THE PROBLEM OF, THE LINKED SECTION 
+OF THE PAGE, HIDING BEHIND THE FIXED HEADER AT THE TOP OF THE PAGE. */
+div.section {
+    position: relative;
+}
+
+div.section h2 span {
+    position: absolute;
+    top: -10px;
+}
+
+/*  End of the 2nd block of selector.  */
+
+
+#club-building {
+    position: relative;
+}
+#club-building h2 span {
+    position: absolute;
+    top: -75px;
+}
+
+/* JUMP TO "club-building" LINK -(hiding behind the FIXED HEADER SOLUTION)  */
+div.section {
+    position: relative;
+}
+
+div.section h2 span {
+    position: absolute;
+    top: -75px;
+}
+
+
+#club-building{
+    margin-bottom: 4rem;
+}
+    
+
+
+.contact-us {
+ 
+ padding: 0px 10px;
+}
+
+
+@media only screen and (max-width: 1000px ) {
+    .image-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-item {
+        display: inline-flex;
+       width: 100%;   
+    }
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+
+}
+
+@media only screen and (max-width: 660px) {
+    
+    .image-holder{
+        display: flex;
+        text-align:center
+    }
+    
+    .contact-us {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
