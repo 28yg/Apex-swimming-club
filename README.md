@@ -18,3 +18,5 @@ Come join us to have fun and day out with the family. Our friendly staff are alw
 + **BOOK A TRIAL:**
 
 New swimmer trials are regularly being arranged. Swimmers are welcomed and assessed on ability by our coaches during the trials and are allocated to squads ranging from formative to performance abilities.
+
+**Visit our website** [Apex Swimming Club](https://28yg.github.io/Apex-swimming-club/)
